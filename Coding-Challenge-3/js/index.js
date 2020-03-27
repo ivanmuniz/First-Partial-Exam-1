@@ -1,7 +1,7 @@
 function game() {
-    // results.innerHTML = "";
     let input = Number(document.querySelector(".fizzBuzzNumber").value);
     let results = document.querySelector(".resultsSection");
+    results.innerHTML = "";
     for(let i = 1 ; i <= input; i++) {
         if( i % 3 === 0 ) {
             results.innerHTML += `<div class="fizz-buzz-item fizz"><span>fizz</span</div>`
