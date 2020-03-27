@@ -1,7 +1,84 @@
-
+* {
+    box-sizing: border-box;
+}
 
 div{
     border: 1px solid black;
     padding: 5px;
 }
 
+.heading, .content, .main {
+    display: none;
+}
+
+.navigation {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.nav-box {
+    width: 50%;
+    text-align: center;
+}
+
+@media (min-width: 600px) and (max-width: 990px) {
+    .nav-box {
+        width: 25%;
+    }
+
+    .content {
+        display: flex;
+    }
+    
+    .side {
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+        text-align: center;
+    }
+
+    .special-side-box {
+        margin-top: auto;
+    }
+
+    .main {
+        display: block;
+        width: 70%;
+    }
+}
+
+@media (min-width: 991px) {
+    .heading, .content, .main {
+        display: flex;
+    }
+
+    .heading{
+        justify-content: space-evenly;
+    }
+
+    .heading-box{
+        width: 30%;
+        text-align: center;
+    }
+
+    .navigation {
+        flex-wrap: nowrap;
+    }
+
+    .side {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main {
+        width: 60%;
+    }
+
+    .side-box {
+        width: 100%;
+        flex: 1;
+        text-align: center;
+    }
+
+}
